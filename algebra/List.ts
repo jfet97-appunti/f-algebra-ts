@@ -40,7 +40,7 @@ export const StringAlgebra = <E>() => ListAlgebra<E, string>(
 )
 
 // projection :: E -> F => 'A' of 'ListF E A' is 'List F'
-export const ProjectionAlgebra = <E>() => <F>(projection: (e:E) => F) => ListAlgebra<E, List<F>>(
+export const ProjectionAlgebra = <E, F>(projection: (e:E) => F) => ListAlgebra<E, List<F>>(
   () => nil, // onNilF
   (value, carrier) => cons(projection(value), carrier) // onConsF
 )

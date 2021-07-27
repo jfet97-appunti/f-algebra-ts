@@ -36,7 +36,7 @@ pipe(
 // ProjectionAlgebra test
 pipe(
   listOfNumbers,
-  cata(listf, ProjectionAlgebra<number>()(x => x * 10)),
+  cata(listf, ProjectionAlgebra(x => x * 10)),
   (ns) => ns,
   cata(listf, ArrayAlgebra()),
   (ns) => console.log(ns)
@@ -45,7 +45,7 @@ pipe(
 // ProjectionAlgebra test
 pipe(
   listOfNumbers,
-  cata(listf, ProjectionAlgebra()(String)),
+  cata(listf, ProjectionAlgebra(String)),
   (ss) => ss,
   cata(listf, ArrayAlgebra()),
   (ss) => console.log(ss)
