@@ -31,7 +31,7 @@ Using the encoding of Higher Kinded Types, made available by the [fp-ts](https:/
 
 Applying `Fix` to `ListF` we get its fixed point:
 ```hs
-type List<E> = Fix (ListF E)
+type List<E> = Fix2<ListF<E>>
 ```
 Now we are able to create list of whichever length we want to, instead of being limited to only one value. Now let's say we have a `List<number>` and we want to sum all the numbers into it. How would you do it? You could write a recursive function of course, but you don't know yet that the `SumAlgebra` defined above is all you need.
 
