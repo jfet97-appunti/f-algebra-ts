@@ -52,7 +52,7 @@ This magic function is called __catamorphism__, _cata_ for friends.
 
 ### The purpose of this repo
 
-It is only a proof of concept. It seems we can do this in TypeScript, but we should?
+It is only a proof of concept. It seems we can do this in TypeScript, but should we?
 
 
 
